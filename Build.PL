@@ -12,7 +12,7 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.4203"
   },
-  "dist_abstract" => "Proxy Log::Dispatch without getting wrong carp levels",
+  "dist_abstract" => "A Log::Dispatch specific wrapper for Log::Contextual",
   "dist_author" => [
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
@@ -24,11 +24,13 @@ my %module_build_args = (
   "recursive_test_files" => 1,
   "requires" => {
     "Carp" => 0,
+    "Log::Contextual" => 0,
     "Log::Contextual::Router" => 0,
     "Moo" => 0,
     "Moose" => 0,
-    "perl" => "5.006",
+    "perl" => "5.008",
     "strict" => 0,
+    "utf8" => 0,
     "warnings" => 0
   },
   "script_files" => [],

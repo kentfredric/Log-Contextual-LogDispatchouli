@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use utf8;
+
 package Log::Contextual::LogDispatch;
 BEGIN {
   $Log::Contextual::LogDispatch::AUTHORITY = 'cpan:KENTNL';
@@ -9,17 +9,25 @@ BEGIN {
   $Log::Contextual::LogDispatch::VERSION = '0.001000';
 }
 
-# ABSTRACT: A Log::Dispatch specific wrapper for Log::Contextual
+# ABSTRACT: Proxy Log::Dispatch without getting wrong carp levels
 
 use Moo;
 
-extends 'Log::Contextual';
+extends 'Log::Contextual::Router';
 
-sub router {
-    return 'Log::Contextual::Router::LogDispatch';
-}
+around handle_log_request => sub {
+    my ( $orig, $self, %message_info ) = @_;
+    require Carp;
+    local $Carp::CarpLevel = $Carp::CarpLevel;
+    $Carp::CarpLevel = $message_info{caller_level} + 1;
+    return $self->$orig( %message_info );
+};
 
-no Moo;
+
+
+__PACKAGE__->meta->make_immutable;
+no Moose;
+
 1;
 
 __END__
@@ -30,7 +38,7 @@ __END__
 
 =head1 NAME
 
-Log::Contextual::LogDispatch - A Log::Dispatch specific wrapper for Log::Contextual
+Log::Contextual::LogDispatch - Proxy Log::Dispatch without getting wrong carp levels
 
 =head1 VERSION
 

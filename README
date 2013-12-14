@@ -1,6 +1,6 @@
 NAME
-    Log::Contextual::LogDispatch - Proxy Log::Dispatch without getting wrong
-    carp levels
+    Log::Contextual::LogDispatch - A Log::Dispatch specific wrapper for
+    Log::Contextual
 
 VERSION
     version 0.001000

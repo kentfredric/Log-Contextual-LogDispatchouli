@@ -1,5 +1,5 @@
 {
-   "abstract" : "Proxy Log::Dispatch without getting wrong carp levels",
+   "abstract" : "A Log::Dispatch specific wrapper for Log::Contextual",
    "author" : [
       "Kent Fredric <kentfredric@gmail.com>"
    ],
@@ -83,11 +83,13 @@
       "runtime" : {
          "requires" : {
             "Carp" : "0",
+            "Log::Contextual" : "0",
             "Log::Contextual::Router" : "0",
             "Moo" : "0",
             "Moose" : "0",
-            "perl" : "5.006",
+            "perl" : "5.008",
             "strict" : "0",
+            "utf8" : "0",
             "warnings" : "0"
          }
       },
@@ -154,6 +156,7 @@
          "Dist::Zilla::Plugin::UploadToCPAN" : "5.006",
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.007000",
          "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "1.7.2",
+         "Log::Contextual" : "0.006000",
          "Module::Build" : "0.4203",
          "Moo" : "1.003001",
          "Moose" : "2.1107",
@@ -165,6 +168,7 @@
          "Test::Pod" : "1.48",
          "Test::Pod::Coverage" : "1.08",
          "strict" : "1.08",
+         "utf8" : "1.13",
          "version" : "0.9904",
          "warnings" : "1.20"
       },
@@ -321,7 +325,8 @@
             "config" : {
                "Dist::Zilla::Plugin::Test::Compile::PerFile" : {
                   "file" : [
-                     "lib/Log/Contextual/LogDispatch.pm"
+                     "lib/Log/Contextual/LogDispatch.pm",
+                     "lib/Log/Contextual/Router/LogDispatch.pm"
                   ],
                   "path_translator" : "base64_filter",
                   "prefix" : "t/00-compile",
