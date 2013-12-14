@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use utf8;
+
 package Log::Contextual::LogDispatchouli;
 BEGIN {
   $Log::Contextual::LogDispatchouli::AUTHORITY = 'cpan:KENTNL';
@@ -16,10 +17,12 @@ use Moo;
 extends 'Log::Contextual';
 
 sub router {
+  return (
     our $Router_Instance ||= do {
-        require Log::Contextual::Router::LogDispatchouli;
-        Log::Contextual::Router::LogDispatchouli->new
-    };
+      require Log::Contextual::Router::LogDispatchouli;
+      Log::Contextual::Router::LogDispatchouli->new;
+      }
+  );
 }
 
 no Moo;
