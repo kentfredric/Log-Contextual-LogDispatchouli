@@ -56,13 +56,13 @@ Which has two primary side effects:
 
 =over 4
 
-=item 1. Under Log::Conextual, it shows errors coming from C<LC>, not C<LC>'s caller ( Useless )
+=item 1. Under L<< C<Log::Contextual>|Log::Contextual >>, it shows errors coming from C<LC>, not C<LC>'s caller ( Useless )
 
-=item 2. Under Moose, if you use a delegation, C<LD> will report problems comming from the delegate ( Useless )
+=item 2. Under L<< C<Moose>|Moose >>, if you use a delegation, C<LD> will report problems coming from the delegate ( Useless )
 
 =back
 
-So this module exists to solve #2, and it has to solve #1 in the proces.
+So this module exists to solve #2, and it has to solve #1 in the process.
 
 =head1 METHODS
 
