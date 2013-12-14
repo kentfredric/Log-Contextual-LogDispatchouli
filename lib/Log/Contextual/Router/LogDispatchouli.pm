@@ -16,12 +16,12 @@ This is simply a wrapper around L<< C<Log::Contextual::Router::handle_log_reques
 =cut
 
 around handle_log_request => sub {
-    my ( $orig, $self, %message_info ) = @_;
-    require Carp;
-    ## no critic (ProhibitPackageVars)
-    local $Carp::CarpLevel = $Carp::CarpLevel;
-    $Carp::CarpLevel = $message_info{caller_level} + 1;
-    return $self->$orig( %message_info );
+  my ( $orig, $self, %message_info ) = @_;
+  require Carp;
+  ## no critic (ProhibitPackageVars)
+  local $Carp::CarpLevel = $Carp::CarpLevel;
+  $Carp::CarpLevel = $message_info{caller_level} + 1;
+  return $self->$orig(%message_info);
 };
 
 no Moo;
