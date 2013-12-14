@@ -16,7 +16,10 @@ use Moo;
 extends 'Log::Contextual';
 
 sub router {
-    return 'Log::Contextual::Router::LogDispatchouli';
+    our $Router_Instance ||= do {
+        require Log::Contextual::Router::LogDispatchouli;
+        Log::Contextual::Router::LogDispatchouli->new
+    };
 }
 
 no Moo;
