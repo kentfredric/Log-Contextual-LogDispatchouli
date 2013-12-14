@@ -1,12 +1,12 @@
 use strict;
 use warnings;
 
-package Log::Contextual::LogDispatch;
+package Log::Contextual::Router::LogDispatch;
 BEGIN {
-  $Log::Contextual::LogDispatch::AUTHORITY = 'cpan:KENTNL';
+  $Log::Contextual::Router::LogDispatch::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Log::Contextual::LogDispatch::VERSION = '0.001000';
+  $Log::Contextual::Router::LogDispatch::VERSION = '0.001000';
 }
 
 # ABSTRACT: Proxy Log::Dispatch without getting wrong carp levels
@@ -38,7 +38,7 @@ __END__
 
 =head1 NAME
 
-Log::Contextual::LogDispatch - Proxy Log::Dispatch without getting wrong carp levels
+Log::Contextual::Router::LogDispatch - Proxy Log::Dispatch without getting wrong carp levels
 
 =head1 VERSION
 

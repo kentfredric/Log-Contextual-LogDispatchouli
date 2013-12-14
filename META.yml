@@ -16,6 +16,9 @@ meta-spec:
 name: Log-Contextual-LogDispatch
 provides:
   Log::Contextual::LogDispatch:
+    file: lib/Log/Contextual/LogDispatch.pm
+    version: 0.001000
+  Log::Contextual::Router::LogDispatch:
     file: lib/Log/Contextual/Router/LogDispatch.pm
     version: 0.001000
 requires:
