@@ -24,9 +24,6 @@ around handle_log_request => sub {
     return $self->$orig( %message_info );
 };
 
-
-
-__PACKAGE__->meta->make_immutable;
-no Moose;
+no Moo;
 
 1;
