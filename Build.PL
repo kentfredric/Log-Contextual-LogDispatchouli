@@ -12,14 +12,14 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.4203"
   },
-  "dist_abstract" => "A Log::Dispatch specific wrapper for Log::Contextual",
+  "dist_abstract" => "A Log::Dispatchouli specific wrapper for Log::Contextual",
   "dist_author" => [
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
-  "dist_name" => "Log-Contextual-LogDispatch",
+  "dist_name" => "Log-Contextual-LogDispatchouli",
   "dist_version" => "0.001000",
   "license" => "perl",
-  "module_name" => "Log::Contextual::LogDispatch",
+  "module_name" => "Log::Contextual::LogDispatchouli",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {

@@ -1,5 +1,5 @@
 {
-   "abstract" : "A Log::Dispatch specific wrapper for Log::Contextual",
+   "abstract" : "A Log::Dispatchouli specific wrapper for Log::Contextual",
    "author" : [
       "Kent Fredric <kentfredric@gmail.com>"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Log-Contextual-LogDispatch",
+   "name" : "Log-Contextual-LogDispatchouli",
    "prereqs" : {
       "build" : {
          "requires" : {
@@ -100,12 +100,12 @@
       }
    },
    "provides" : {
-      "Log::Contextual::LogDispatch" : {
-         "file" : "lib/Log/Contextual/LogDispatch.pm",
+      "Log::Contextual::LogDispatchouli" : {
+         "file" : "lib/Log/Contextual/LogDispatchouli.pm",
          "version" : "0.001000"
       },
-      "Log::Contextual::Router::LogDispatch" : {
-         "file" : "lib/Log/Contextual/Router/LogDispatch.pm",
+      "Log::Contextual::Router::LogDispatchouli" : {
+         "file" : "lib/Log/Contextual/Router/LogDispatchouli.pm",
          "version" : "0.001000"
       }
    },
@@ -329,8 +329,8 @@
             "config" : {
                "Dist::Zilla::Plugin::Test::Compile::PerFile" : {
                   "file" : [
-                     "lib/Log/Contextual/LogDispatch.pm",
-                     "lib/Log/Contextual/Router/LogDispatch.pm"
+                     "lib/Log/Contextual/LogDispatchouli.pm",
+                     "lib/Log/Contextual/Router/LogDispatchouli.pm"
                   ],
                   "path_translator" : "base64_filter",
                   "prefix" : "t/00-compile",

@@ -8,11 +8,11 @@ META.json
 META.yml
 README
 dist.ini
-lib/Log/Contextual/LogDispatch.pm
-lib/Log/Contextual/Router/LogDispatch.pm
+lib/Log/Contextual/LogDispatchouli.pm
+lib/Log/Contextual/Router/LogDispatchouli.pm
 perlcritic.rc
-t/00-compile/lib_Log_Contextual_LogDispatch_pm.t
-t/00-compile/lib_Log_Contextual_Router_LogDispatch_pm.t
+t/00-compile/lib_Log_Contextual_LogDispatchouli_pm.t
+t/00-compile/lib_Log_Contextual_Router_LogDispatchouli_pm.t
 t/000-report-versions-tiny.t
 weaver.ini
 xt/author/critic.t

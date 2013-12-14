@@ -1,22 +1,22 @@
 use strict;
 use warnings;
 use utf8;
-package Log::Contextual::LogDispatch;
+package Log::Contextual::LogDispatchouli;
 BEGIN {
-  $Log::Contextual::LogDispatch::AUTHORITY = 'cpan:KENTNL';
+  $Log::Contextual::LogDispatchouli::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Log::Contextual::LogDispatch::VERSION = '0.001000';
+  $Log::Contextual::LogDispatchouli::VERSION = '0.001000';
 }
 
-# ABSTRACT: A Log::Dispatch specific wrapper for Log::Contextual
+# ABSTRACT: A Log::Dispatchouli specific wrapper for Log::Contextual
 
 use Moo;
 
 extends 'Log::Contextual';
 
 sub router {
-    return 'Log::Contextual::Router::LogDispatch';
+    return 'Log::Contextual::Router::LogDispatchouli';
 }
 
 no Moo;
@@ -30,7 +30,7 @@ __END__
 
 =head1 NAME
 
-Log::Contextual::LogDispatch - A Log::Dispatch specific wrapper for Log::Contextual
+Log::Contextual::LogDispatchouli - A Log::Dispatchouli specific wrapper for Log::Contextual
 
 =head1 VERSION
 

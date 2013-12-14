@@ -1,6 +1,6 @@
 NAME
-    Log::Contextual::LogDispatch - A Log::Dispatch specific wrapper for
-    Log::Contextual
+    Log::Contextual::LogDispatchouli - A Log::Dispatchouli specific wrapper
+    for Log::Contextual
 
 VERSION
     version 0.001000
