@@ -27,7 +27,6 @@ my %module_build_args = (
     "Log::Contextual" => 0,
     "Log::Contextual::Router" => 0,
     "Moo" => 0,
-    "Moose" => 0,
     "perl" => "5.008",
     "strict" => 0,
     "utf8" => 0,

@@ -17,18 +17,15 @@ extends 'Log::Contextual::Router';
 
 
 around handle_log_request => sub {
-    my ( $orig, $self, %message_info ) = @_;
-    require Carp;
-    ## no critic (ProhibitPackageVars)
-    local $Carp::CarpLevel = $Carp::CarpLevel;
-    $Carp::CarpLevel = $message_info{caller_level} + 1;
-    return $self->$orig( %message_info );
+  my ( $orig, $self, %message_info ) = @_;
+  require Carp;
+  ## no critic (ProhibitPackageVars)
+  $message_info{caller_level}++;
+  local $Carp::CarpLevel = $message_info{caller_level};
+  return $self->$orig(%message_info);
 };
 
-
-
-__PACKAGE__->meta->make_immutable;
-no Moose;
+no Moo;
 
 1;
 

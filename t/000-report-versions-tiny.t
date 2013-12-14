@@ -53,7 +53,6 @@ eval { $v .= pmver('Log::Contextual','any version') };
 eval { $v .= pmver('Log::Contextual::Router','any version') };
 eval { $v .= pmver('Module::Build','0.4203') };
 eval { $v .= pmver('Moo','any version') };
-eval { $v .= pmver('Moose','any version') };
 eval { $v .= pmver('Test::More','1.001002') };
 eval { $v .= pmver('strict','any version') };
 eval { $v .= pmver('utf8','any version') };
