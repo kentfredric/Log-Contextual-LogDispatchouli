@@ -56,9 +56,9 @@ Which has two primary side effects:
 
 =over 4
 
-=item 1. Under Log::Conextual, it shows errors comming from LC, not LC's caller ( Useless )
+=item 1. Under Log::Conextual, it shows errors coming from C<LC>, not C<LC>'s caller ( Useless )
 
-=item 2. Under Moose, if you use a delegation, LD will report problems comming from the delegate ( Useless )
+=item 2. Under Moose, if you use a delegation, C<LD> will report problems comming from the delegate ( Useless )
 
 =back
 

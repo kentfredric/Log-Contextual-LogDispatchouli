@@ -12,10 +12,10 @@ DESCRIPTION
 
     Which has two primary side effects:
 
-    1. Under Log::Conextual, it shows errors comming from LC, not LC's
+    1. Under Log::Conextual, it shows errors coming from "LC", not "LC"'s
     caller ( Useless )
-    2. Under Moose, if you use a delegation, LD will report problems comming
-    from the delegate ( Useless )
+    2. Under Moose, if you use a delegation, "LD" will report problems
+    comming from the delegate ( Useless )
 
     So this module exists to solve #2, and it has to solve #1 in the proces.
 
