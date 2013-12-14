@@ -20,7 +20,7 @@ around handle_log_request => sub {
     require Carp;
     ## no critic (ProhibitPackageVars)
     local $Carp::CarpLevel = $Carp::CarpLevel;
-    $Carp::CarpLevel = $message_info{caller_level} + 1;
+    $Carp::CarpLevel = $message_info{caller_level} + 0;
     return $self->$orig( %message_info );
 };
 
