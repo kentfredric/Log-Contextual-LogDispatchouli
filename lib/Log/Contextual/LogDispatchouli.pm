@@ -12,12 +12,14 @@ BEGIN {
 
 # ABSTRACT: A Log::Dispatchouli specific wrapper for Log::Contextual
 
+
 use Moo;
 
 extends 'Log::Contextual';
 
 ## no critic (ProhibitPackageVars, Capitalization)
 our $Router_Instance;
+
 
 sub router {
   return (
@@ -44,6 +46,38 @@ Log::Contextual::LogDispatchouli - A Log::Dispatchouli specific wrapper for Log:
 =head1 VERSION
 
 version 0.001000
+
+=head1 DESCRIPTION
+
+L<< C<Log::Dispatchouli>|Log::Dispatchouli >> doesn't need much to get it to work with L<< C<Log::Contextual>|Log::Contextual >> however,
+it has one teeny annoying quirk in that its stack traces are always off by one.
+
+Which has two primary side effects:
+
+=over 4
+
+=item 1. Under Log::Conextual, it shows errors comming from LC, not LC's caller ( Useless )
+
+=item 2. Under Moose, if you use a delegation, LD will report problems comming from the delegate ( Useless )
+
+=back
+
+So this module exists to solve #2, and it has to solve #1 in the proces.
+
+=head1 METHODS
+
+=head2 C<router>
+
+This is the only difference this module has from L<< C<Log::Contextual>|Log::Contextual >>,
+and its that it returns a L<< C<Log::Contextual::Router::LogDispatchouli>|Log::Contextual::Router::LogDispatchouli >> instead of the default router.
+
+=head1 USAGE
+
+    use Log::Contextual::LogDispatchouli qw( set_logger );
+
+    set_logger $ld;
+
+Other than that, this module is just a wrapper around the rest of L<< C<Log::Contextual>|Log::Contextual >>
 
 =head1 AUTHOR
 

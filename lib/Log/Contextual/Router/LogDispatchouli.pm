@@ -15,6 +15,7 @@ use Moo;
 
 extends 'Log::Contextual::Router';
 
+
 around handle_log_request => sub {
     my ( $orig, $self, %message_info ) = @_;
     require Carp;
@@ -44,6 +45,12 @@ Log::Contextual::Router::LogDispatchouli - Proxy Log::Dispatchouli without getti
 =head1 VERSION
 
 version 0.001000
+
+=head1 METHODS
+
+=head2 C<handle_log_request>
+
+This is simply a wrapper around L<< C<Log::Contextual::Router::handle_log_request>|Log::Contextual::Router/handle_log_request >> that locally sets C<$Carp::CarpLevel> to the value needed so L<< C<Log::Dispatchouli>|Log::Dispatchouli >> reports errors from the right place.
 
 =head1 AUTHOR
 
