@@ -32,9 +32,9 @@ requires:
   utf8: 0
   warnings: 0
 resources:
-  bugtracker: https://github.com/kentfredric/Log-Dispatch-LogDispatchouli/issues
-  homepage: https://github.com/kentfredric/Log-Dispatch-LogDispatchouli
-  repository: https://github.com/kentfredric/Log-Dispatch-LogDispatchouli.git
+  bugtracker: https://github.com/kentfredric/Log-Contextual-LogDispatchouli/issues
+  homepage: https://github.com/kentfredric/Log-Contextual-LogDispatchouli
+  repository: https://github.com/kentfredric/Log-Contextual-LogDispatchouli.git
 version: 0.001000
 x_BuiltWith:
   failures:

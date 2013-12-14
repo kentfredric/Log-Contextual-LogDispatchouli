@@ -112,13 +112,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/Log-Dispatch-LogDispatchouli/issues"
+         "web" : "https://github.com/kentfredric/Log-Contextual-LogDispatchouli/issues"
       },
-      "homepage" : "https://github.com/kentfredric/Log-Dispatch-LogDispatchouli",
+      "homepage" : "https://github.com/kentfredric/Log-Contextual-LogDispatchouli",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/Log-Dispatch-LogDispatchouli.git",
-         "web" : "https://github.com/kentfredric/Log-Dispatch-LogDispatchouli"
+         "url" : "https://github.com/kentfredric/Log-Contextual-LogDispatchouli.git",
+         "web" : "https://github.com/kentfredric/Log-Contextual-LogDispatchouli"
       }
    },
    "version" : "0.001000",
