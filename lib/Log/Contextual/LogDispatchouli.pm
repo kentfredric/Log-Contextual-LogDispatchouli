@@ -16,6 +16,7 @@ use Moo;
 
 extends 'Log::Contextual';
 
+## no critic (ProhibitPackageVars, Capitalization)
 our $Router_Instance;
 
 sub router {
