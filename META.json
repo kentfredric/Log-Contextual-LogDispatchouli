@@ -101,7 +101,7 @@
    },
    "provides" : {
       "Log::Contextual::LogDispatch" : {
-         "file" : "lib/Log/Contextual/LogDispatch.pm",
+         "file" : "lib/Log/Contextual/Router/LogDispatch.pm",
          "version" : "0.001000"
       }
    },
